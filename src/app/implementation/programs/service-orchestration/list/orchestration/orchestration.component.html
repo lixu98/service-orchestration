@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-header">
+        <div class="title">
+            <span class="name">{{ data?.name }}</span>
+            <span class="text">{{ data?.code }}</span>
+            <nz-tag nzColor="#97A9C3">草稿</nz-tag>
+        </div>
+        <div class="operations">
+            <button nz-button nzType="default" [nzLoading]="deleteLoading" (click)="handleDelete()">删除</button>
+            <button nz-button nzType="default" [nzLoading]="saveLoading" (click)="handleSave()">保存</button>
+            <button nz-button nzType="primary" [nzLoading]="submitLoading" (click)="handleSubmit()">提交</button>
+        </div>
+    </div>
+    <div class="container-content">
+        <div class="palette" #palette></div>
+        <div class="canvas" #canvas></div>
+        <div class="properties-panel" #propertiesPanel></div>
+    </div>
+</div>
